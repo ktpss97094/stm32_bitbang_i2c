@@ -27,6 +27,7 @@ The pins should be Open Drain and Pulled-up.
          int main(void){
 
                   I2C_init();
+				  DWT_Delay_Init();
                   DWT_Delay_us(1000); //1 ms
                   MX_GPIO_Init();
                   
