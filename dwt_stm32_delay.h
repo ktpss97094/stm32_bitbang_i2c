@@ -6,7 +6,11 @@ extern "C" {
 #endif
 
 
-#include "stm32f1xx_hal.h"
+#if defined(STM32F4)
+  #include "stm32f4xx_hal.h"
+#else
+  #include "stm32f1xx_hal.h"
+#endif
 uint32_t DWT_Delay_Init(void);
 
 
